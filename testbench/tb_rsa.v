@@ -118,7 +118,7 @@ initial begin
     end
 
     $display("----------------------------------------------------------");
-    if (errors == 0) begin
+    if (!errors) begin
         $display(" RESULT: 5/5 PASS");
         $display(" OVERALL: PASS");
     end else begin
