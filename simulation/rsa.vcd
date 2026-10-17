@@ -1,0 +1,1836 @@
+$date
+	Sat Oct 17 12:50:01 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_rsa $end
+$var wire 3 ! fsm_state [2:0] $end
+$var wire 3 " kg_state [2:0] $end
+$var wire 16 # recovered [15:0] $end
+$var wire 16 $ phi [15:0] $end
+$var wire 16 % n [15:0] $end
+$var wire 1 & match $end
+$var wire 1 ' error $end
+$var wire 3 ( enc_state [2:0] $end
+$var wire 16 ) e [15:0] $end
+$var wire 1 * done $end
+$var wire 3 + dec_state [2:0] $end
+$var wire 16 , d [15:0] $end
+$var wire 16 - cipher [15:0] $end
+$var wire 1 . busy $end
+$var reg 1 / clk $end
+$var reg 16 0 message [15:0] $end
+$var reg 8 1 p [7:0] $end
+$var reg 8 2 q [7:0] $end
+$var reg 1 3 rst $end
+$var reg 1 4 start $end
+$var integer 32 5 errors [31:0] $end
+$var integer 32 6 i [31:0] $end
+$scope module dut $end
+$var wire 1 . busy $end
+$var wire 16 7 cipher [15:0] $end
+$var wire 1 / clk $end
+$var wire 16 8 d [15:0] $end
+$var wire 16 9 e [15:0] $end
+$var wire 16 : message [15:0] $end
+$var wire 16 ; n [15:0] $end
+$var wire 8 < p [7:0] $end
+$var wire 16 = phi [15:0] $end
+$var wire 8 > q [7:0] $end
+$var wire 16 ? recovered [15:0] $end
+$var wire 1 3 rst $end
+$var wire 1 4 start $end
+$var wire 16 @ recovered_int [15:0] $end
+$var wire 16 A phi_int [15:0] $end
+$var wire 16 B n_int [15:0] $end
+$var wire 1 C kg_error $end
+$var wire 1 D kg_done $end
+$var wire 1 E enc_error $end
+$var wire 1 F enc_done $end
+$var wire 16 G e_int [15:0] $end
+$var wire 1 H dec_error $end
+$var wire 1 I dec_done $end
+$var wire 16 J d_int [15:0] $end
+$var wire 16 K cipher_int [15:0] $end
+$var parameter 3 L T_DEC $end
+$var parameter 3 M T_DONE $end
+$var parameter 3 N T_ENC $end
+$var parameter 3 O T_IDLE $end
+$var parameter 3 P T_KG $end
+$var reg 1 Q dec_start $end
+$var reg 1 * done $end
+$var reg 1 R enc_start $end
+$var reg 1 ' error $end
+$var reg 1 S kg_start $end
+$var reg 1 & match $end
+$var reg 16 T msg_r [15:0] $end
+$var reg 3 U state [2:0] $end
+$scope module u_decrypt $end
+$var wire 1 / clk $end
+$var wire 1 3 rst $end
+$var wire 1 Q start $end
+$var wire 16 V recovered [15:0] $end
+$var wire 16 W n [15:0] $end
+$var wire 1 H error $end
+$var wire 1 I done $end
+$var wire 16 X d [15:0] $end
+$var wire 16 Y cipher [15:0] $end
+$scope module u_modexp $end
+$var wire 1 / clk $end
+$var wire 1 3 rst $end
+$var wire 1 Q start $end
+$var wire 32 Z result_ext [31:0] $end
+$var wire 16 [ red_sq [15:0] $end
+$var wire 16 \ red_res [15:0] $end
+$var wire 32 ] mul_sq [31:0] $end
+$var wire 32 ^ mul_res [31:0] $end
+$var wire 16 _ modu [15:0] $end
+$var wire 32 ` mod_ext [31:0] $end
+$var wire 16 a exp [15:0] $end
+$var wire 32 b base_ext [31:0] $end
+$var wire 16 c base [15:0] $end
+$var parameter 2 d M_CHECK $end
+$var parameter 2 e M_IDLE $end
+$var parameter 2 f M_STEP $end
+$var reg 16 g base_r [15:0] $end
+$var reg 1 I done $end
+$var reg 1 H error $end
+$var reg 16 h exp_r [15:0] $end
+$var reg 16 i result [15:0] $end
+$var reg 16 j result_r [15:0] $end
+$var reg 2 k state [1:0] $end
+$upscope $end
+$upscope $end
+$scope module u_encrypt $end
+$var wire 1 / clk $end
+$var wire 16 l message [15:0] $end
+$var wire 1 3 rst $end
+$var wire 1 R start $end
+$var wire 16 m n [15:0] $end
+$var wire 1 E error $end
+$var wire 16 n e [15:0] $end
+$var wire 1 F done $end
+$var wire 16 o cipher [15:0] $end
+$scope module u_modexp $end
+$var wire 16 p base [15:0] $end
+$var wire 1 / clk $end
+$var wire 1 3 rst $end
+$var wire 1 R start $end
+$var wire 32 q result_ext [31:0] $end
+$var wire 16 r red_sq [15:0] $end
+$var wire 16 s red_res [15:0] $end
+$var wire 32 t mul_sq [31:0] $end
+$var wire 32 u mul_res [31:0] $end
+$var wire 16 v modu [15:0] $end
+$var wire 32 w mod_ext [31:0] $end
+$var wire 16 x exp [15:0] $end
+$var wire 32 y base_ext [31:0] $end
+$var parameter 2 z M_CHECK $end
+$var parameter 2 { M_IDLE $end
+$var parameter 2 | M_STEP $end
+$var reg 16 } base_r [15:0] $end
+$var reg 1 F done $end
+$var reg 1 E error $end
+$var reg 16 ~ exp_r [15:0] $end
+$var reg 16 !" result [15:0] $end
+$var reg 16 "" result_r [15:0] $end
+$var reg 2 #" state [1:0] $end
+$upscope $end
+$upscope $end
+$scope module u_keygen $end
+$var wire 1 / clk $end
+$var wire 8 $" p [7:0] $end
+$var wire 8 %" q [7:0] $end
+$var wire 1 3 rst $end
+$var wire 1 S start $end
+$var wire 16 &" q_ext [15:0] $end
+$var wire 16 '" phi_calc [15:0] $end
+$var wire 16 (" p_ext [15:0] $end
+$var wire 16 )" n_calc [15:0] $end
+$var wire 32 *" ed_prod [31:0] $end
+$var wire 32 +" ed_mod [31:0] $end
+$var parameter 3 ," K_FIND_D $end
+$var parameter 3 -" K_FIND_E $end
+$var parameter 3 ." K_IDLE $end
+$var reg 16 /" d [15:0] $end
+$var reg 16 0" d_c [15:0] $end
+$var reg 1 D done $end
+$var reg 16 1" e [15:0] $end
+$var reg 16 2" e_c [15:0] $end
+$var reg 1 C error $end
+$var reg 16 3" n [15:0] $end
+$var reg 16 4" phi [15:0] $end
+$var reg 3 5" state [2:0] $end
+$scope function gcd16 $end
+$var reg 16 6" a [15:0] $end
+$var reg 16 7" b [15:0] $end
+$var reg 16 8" t [15:0] $end
+$var reg 16 9" x [15:0] $end
+$var reg 16 :" y [15:0] $end
+$var integer 32 ;" i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 ."
+b1 -"
+b10 ,"
+b10 |
+b0 {
+b1 z
+b10 f
+b0 e
+b1 d
+b1 P
+b0 O
+b10 N
+b100 M
+b11 L
+$end
+#0
+$dumpvars
+bx ;"
+bx :"
+bx 9"
+bx 8"
+bx 7"
+bx 6"
+bx 5"
+bx 4"
+bx 3"
+bx 2"
+bx 1"
+bx 0"
+bx /"
+bx +"
+bx *"
+b100001 )"
+b11 ("
+b10100 '"
+b1011 &"
+b1011 %"
+b11 $"
+bx #"
+bx ""
+bx !"
+bx ~
+bx }
+b0xxxxxxxxxxxxxxxx y
+bx x
+b0xxxxxxxxxxxxxxxx w
+bx v
+bx u
+bx t
+bx s
+bx r
+b0xxxxxxxxxxxxxxxx q
+bx p
+bx o
+bx n
+bx m
+bx l
+bx k
+bx j
+bx i
+bx h
+bx g
+bx c
+b0xxxxxxxxxxxxxxxx b
+bx a
+b0xxxxxxxxxxxxxxxx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+b0xxxxxxxxxxxxxxxx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+xS
+xR
+xQ
+bx K
+bx J
+xI
+xH
+bx G
+xF
+xE
+xD
+xC
+bx B
+bx A
+bx @
+bx ?
+b1011 >
+bx =
+b11 <
+bx ;
+b0 :
+bx 9
+bx 8
+bx 7
+bx 6
+b0 5
+04
+13
+b1011 2
+b11 1
+b0 0
+0/
+x.
+bx -
+bx ,
+b0xx +
+x*
+bx )
+b0xx (
+x'
+x&
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#5000
+b0 r
+b0 s
+b0 [
+b0 \
+b11111111111111111111111111111111 +"
+0.
+b0 *"
+b1 0"
+b10 2"
+0C
+0D
+b0 ,
+b0 8
+b0 J
+b0 X
+b0 a
+b0 /"
+b0 )
+b0 9
+b0 G
+b0 n
+b0 x
+b0 1"
+b0 $
+b0 =
+b0 A
+b0 4"
+b0 w
+b0 `
+b0 %
+b0 ;
+b0 B
+b0 W
+b0 _
+b0 m
+b0 v
+b0 3"
+b0 "
+b0 5"
+b0 ~
+b0 u
+b0 t
+b0 y
+b0 }
+b0 q
+b0 ""
+0E
+0F
+b0 -
+b0 7
+b0 K
+b0 Y
+b0 c
+b0 o
+b0 !"
+b0 (
+b0 #"
+b0 h
+b0 ^
+b0 ]
+b0 b
+b0 g
+b0 Z
+b0 j
+0H
+0I
+b0 #
+b0 ?
+b0 @
+b0 V
+b0 i
+b0 +
+b0 k
+0'
+0*
+0&
+0Q
+0R
+0S
+b0 T
+b0 l
+b0 p
+b0 !
+b0 U
+1/
+#10000
+0/
+#15000
+1/
+#20000
+0/
+#25000
+03
+1/
+#30000
+0/
+#35000
+1/
+#40000
+0/
+#45000
+b0 6
+1/
+#50000
+14
+b100 0
+b100 :
+0/
+#55000
+1.
+b1 !
+b1 U
+1S
+b100 T
+b100 l
+b100 p
+1/
+#60000
+04
+0/
+#65000
+b0 +"
+b1 "
+b1 5"
+b10100 $
+b10100 =
+b10100 A
+b10100 4"
+b100001 w
+b100001 `
+b100001 %
+b100001 ;
+b100001 B
+b100001 W
+b100001 _
+b100001 m
+b100001 v
+b100001 3"
+0S
+1/
+#70000
+0/
+#75000
+b11 2"
+b0 8"
+b100000 ;"
+b0 :"
+b10 9"
+b10 6"
+b10100 7"
+1/
+#80000
+0/
+#85000
+b11 +"
+b10 "
+b10 5"
+b11 *"
+b11 )
+b11 9
+b11 G
+b11 n
+b11 x
+b11 1"
+b0 8"
+b100000 ;"
+b0 :"
+b1 9"
+b11 6"
+1/
+#90000
+0/
+#95000
+b110 +"
+b110 *"
+b10 0"
+1/
+#100000
+0/
+#105000
+b1001 +"
+b1001 *"
+b11 0"
+1/
+#110000
+0/
+#115000
+b1100 +"
+b1100 *"
+b100 0"
+1/
+#120000
+0/
+#125000
+b1111 +"
+b1111 *"
+b101 0"
+1/
+#130000
+0/
+#135000
+b10010 +"
+b10010 *"
+b110 0"
+1/
+#140000
+0/
+#145000
+b1 +"
+b10101 *"
+b111 0"
+1/
+#150000
+0/
+#155000
+b0 "
+b0 5"
+1D
+b111 ,
+b111 8
+b111 J
+b111 X
+b111 a
+b111 /"
+1/
+#160000
+0/
+#165000
+0D
+b10 !
+b10 U
+1R
+1/
+#170000
+0/
+#175000
+b100 s
+b10000 r
+0R
+b1 (
+b1 #"
+b11 ~
+b100 u
+b10000 t
+b100 y
+b100 }
+b1 q
+b1 ""
+1/
+#180000
+0/
+#185000
+b10 (
+b10 #"
+1/
+#190000
+0/
+#195000
+b11001 r
+b11111 s
+b1 (
+b1 #"
+b1 ~
+b100000000 t
+b10000 y
+b10000 }
+b1000000 u
+b100 q
+b100 ""
+1/
+#200000
+0/
+#205000
+b10 (
+b10 #"
+1/
+#210000
+0/
+#215000
+b11111 r
+b10000 s
+b1 (
+b1 #"
+b0 ~
+b1001110001 t
+b11001 y
+b11001 }
+b1100000111 u
+b11111 q
+b11111 ""
+1/
+#220000
+0/
+#225000
+b0 (
+b0 #"
+1F
+b11111 -
+b11111 7
+b11111 K
+b11111 Y
+b11111 c
+b11111 o
+b11111 !"
+1/
+#230000
+0/
+#235000
+b11 !
+b11 U
+1Q
+0F
+1/
+#240000
+0/
+#245000
+b11111 \
+b100 [
+b1 +
+b1 k
+b111 h
+b11111 ^
+b1111000001 ]
+b11111 b
+b11111 g
+b1 Z
+b1 j
+0Q
+1/
+#250000
+0/
+#255000
+b10 +
+b10 k
+1/
+#260000
+0/
+#265000
+b10000 [
+b11001 \
+b1 +
+b1 k
+b11 h
+b10000 ]
+b100 b
+b100 g
+b1111100 ^
+b11111 Z
+b11111 j
+1/
+#270000
+0/
+#275000
+b10 +
+b10 k
+1/
+#280000
+0/
+#285000
+b11001 [
+b100 \
+b1 +
+b1 k
+b1 h
+b100000000 ]
+b10000 b
+b10000 g
+b110010000 ^
+b11001 Z
+b11001 j
+1/
+#290000
+0/
+#295000
+b10 +
+b10 k
+1/
+#300000
+0/
+#305000
+b11111 [
+b1 \
+b1 +
+b1 k
+b0 h
+b1001110001 ]
+b11001 b
+b11001 g
+b1100100 ^
+b100 Z
+b100 j
+1/
+#310000
+0/
+#315000
+b0 +
+b0 k
+1I
+b100 #
+b100 ?
+b100 @
+b100 V
+b100 i
+1/
+#320000
+0/
+#325000
+0.
+0I
+b100 !
+b100 U
+1*
+1&
+1/
+#330000
+0/
+#335000
+b1 6
+1/
+#340000
+14
+b1010 0
+b1010 :
+0/
+#345000
+1.
+b1 !
+b1 U
+1S
+b1010 T
+b1010 l
+b1010 p
+0&
+0*
+1/
+#350000
+04
+0/
+#355000
+b11 +"
+0S
+b1 "
+b1 5"
+b11 *"
+b1 0"
+b10 2"
+1/
+#360000
+0/
+#365000
+b11 2"
+b0 8"
+b100000 ;"
+b0 :"
+b10 9"
+b10 6"
+1/
+#370000
+0/
+#375000
+b10 "
+b10 5"
+b0 8"
+b100000 ;"
+b0 :"
+b1 9"
+b11 6"
+1/
+#380000
+0/
+#385000
+b110 +"
+b110 *"
+b10 0"
+1/
+#390000
+0/
+#395000
+b1001 +"
+b1001 *"
+b11 0"
+1/
+#400000
+0/
+#405000
+b1100 +"
+b1100 *"
+b100 0"
+1/
+#410000
+0/
+#415000
+b1111 +"
+b1111 *"
+b101 0"
+1/
+#420000
+0/
+#425000
+b10010 +"
+b10010 *"
+b110 0"
+1/
+#430000
+0/
+#435000
+b1 +"
+b10101 *"
+b111 0"
+1/
+#440000
+0/
+#445000
+b0 "
+b0 5"
+1D
+1/
+#450000
+0/
+#455000
+b10 !
+b10 U
+1R
+0D
+1/
+#460000
+0/
+#465000
+b1 r
+b1010 s
+b1 (
+b1 #"
+b11 ~
+b1100100 t
+b1010 y
+b1010 }
+b1010 u
+b1 q
+b1 ""
+0R
+1/
+#470000
+0/
+#475000
+b10 (
+b10 #"
+1/
+#480000
+0/
+#485000
+b1 (
+b1 #"
+b1 ~
+b1 t
+b1 y
+b1 }
+b1010 u
+b1010 q
+b1010 ""
+1/
+#490000
+0/
+#495000
+b10 (
+b10 #"
+1/
+#500000
+0/
+#505000
+b1 (
+b1 #"
+b0 ~
+1/
+#510000
+0/
+#515000
+b0 (
+b0 #"
+1F
+b1010 -
+b1010 7
+b1010 K
+b1010 Y
+b1010 c
+b1010 o
+b1010 !"
+1/
+#520000
+0/
+#525000
+0F
+b11 !
+b11 U
+1Q
+1/
+#530000
+0/
+#535000
+b1 [
+b1010 \
+0Q
+b1 +
+b1 k
+b111 h
+b1100100 ]
+b1010 b
+b1010 g
+b1010 ^
+b1 Z
+b1 j
+1/
+#540000
+0/
+#545000
+b10 +
+b10 k
+1/
+#550000
+0/
+#555000
+b1 +
+b1 k
+b11 h
+b1 ]
+b1 b
+b1 g
+b1010 ^
+b1010 Z
+b1010 j
+1/
+#560000
+0/
+#565000
+b10 +
+b10 k
+1/
+#570000
+0/
+#575000
+b1 +
+b1 k
+b1 h
+1/
+#580000
+0/
+#585000
+b10 +
+b10 k
+1/
+#590000
+0/
+#595000
+b1 +
+b1 k
+b0 h
+1/
+#600000
+0/
+#605000
+b0 +
+b0 k
+1I
+b1010 #
+b1010 ?
+b1010 @
+b1010 V
+b1010 i
+1/
+#610000
+0/
+#615000
+0.
+b100 !
+b100 U
+1*
+1&
+0I
+1/
+#620000
+0/
+#625000
+b10 6
+1/
+#630000
+14
+b100000 0
+b100000 :
+0/
+#635000
+1.
+b1 !
+b1 U
+1S
+b100000 T
+b100000 l
+b100000 p
+0&
+0*
+1/
+#640000
+04
+0/
+#645000
+b11 +"
+b1 "
+b1 5"
+b11 *"
+b1 0"
+b10 2"
+0S
+1/
+#650000
+0/
+#655000
+b11 2"
+b0 8"
+b100000 ;"
+b0 :"
+b10 9"
+b10 6"
+1/
+#660000
+0/
+#665000
+b10 "
+b10 5"
+b0 8"
+b100000 ;"
+b0 :"
+b1 9"
+b11 6"
+1/
+#670000
+0/
+#675000
+b110 +"
+b110 *"
+b10 0"
+1/
+#680000
+0/
+#685000
+b1001 +"
+b1001 *"
+b11 0"
+1/
+#690000
+0/
+#695000
+b1100 +"
+b1100 *"
+b100 0"
+1/
+#700000
+0/
+#705000
+b1111 +"
+b1111 *"
+b101 0"
+1/
+#710000
+0/
+#715000
+b10010 +"
+b10010 *"
+b110 0"
+1/
+#720000
+0/
+#725000
+b1 +"
+b10101 *"
+b111 0"
+1/
+#730000
+0/
+#735000
+b0 "
+b0 5"
+1D
+1/
+#740000
+0/
+#745000
+0D
+b10 !
+b10 U
+1R
+1/
+#750000
+0/
+#755000
+b100000 s
+0R
+b1 (
+b1 #"
+b11 ~
+b10000000000 t
+b100000 y
+b100000 }
+b100000 u
+b1 q
+b1 ""
+1/
+#760000
+0/
+#765000
+b10 (
+b10 #"
+1/
+#770000
+0/
+#775000
+b1 (
+b1 #"
+b1 ~
+b1 t
+b1 y
+b1 }
+b100000 u
+b100000 q
+b100000 ""
+1/
+#780000
+0/
+#785000
+b10 (
+b10 #"
+1/
+#790000
+0/
+#795000
+b1 (
+b1 #"
+b0 ~
+1/
+#800000
+0/
+#805000
+b0 (
+b0 #"
+1F
+b100000 -
+b100000 7
+b100000 K
+b100000 Y
+b100000 c
+b100000 o
+b100000 !"
+1/
+#810000
+0/
+#815000
+b11 !
+b11 U
+1Q
+0F
+1/
+#820000
+0/
+#825000
+b100000 \
+b1 +
+b1 k
+b111 h
+b10000000000 ]
+b100000 b
+b100000 g
+b100000 ^
+b1 Z
+b1 j
+0Q
+1/
+#830000
+0/
+#835000
+b10 +
+b10 k
+1/
+#840000
+0/
+#845000
+b1 +
+b1 k
+b11 h
+b1 ]
+b1 b
+b1 g
+b100000 ^
+b100000 Z
+b100000 j
+1/
+#850000
+0/
+#855000
+b10 +
+b10 k
+1/
+#860000
+0/
+#865000
+b1 +
+b1 k
+b1 h
+1/
+#870000
+0/
+#875000
+b10 +
+b10 k
+1/
+#880000
+0/
+#885000
+b1 +
+b1 k
+b0 h
+1/
+#890000
+0/
+#895000
+b0 +
+b0 k
+1I
+b100000 #
+b100000 ?
+b100000 @
+b100000 V
+b100000 i
+1/
+#900000
+0/
+#905000
+0.
+0I
+b100 !
+b100 U
+1*
+1&
+1/
+#910000
+0/
+#915000
+b11 6
+1/
+#920000
+14
+b101 0
+b101 :
+0/
+#925000
+1.
+b1 !
+b1 U
+1S
+b101 T
+b101 l
+b101 p
+0&
+0*
+1/
+#930000
+04
+0/
+#935000
+b11 +"
+0S
+b1 "
+b1 5"
+b11 *"
+b1 0"
+b10 2"
+1/
+#940000
+0/
+#945000
+b11 2"
+b0 8"
+b100000 ;"
+b0 :"
+b10 9"
+b10 6"
+1/
+#950000
+0/
+#955000
+b10 "
+b10 5"
+b0 8"
+b100000 ;"
+b0 :"
+b1 9"
+b11 6"
+1/
+#960000
+0/
+#965000
+b110 +"
+b110 *"
+b10 0"
+1/
+#970000
+0/
+#975000
+b1001 +"
+b1001 *"
+b11 0"
+1/
+#980000
+0/
+#985000
+b1100 +"
+b1100 *"
+b100 0"
+1/
+#990000
+0/
+#995000
+b1111 +"
+b1111 *"
+b101 0"
+1/
+#1000000
+0/
+#1005000
+b10010 +"
+b10010 *"
+b110 0"
+1/
+#1010000
+0/
+#1015000
+b1 +"
+b10101 *"
+b111 0"
+1/
+#1020000
+0/
+#1025000
+b0 "
+b0 5"
+1D
+1/
+#1030000
+0/
+#1035000
+b10 !
+b10 U
+1R
+0D
+1/
+#1040000
+0/
+#1045000
+b11001 r
+b101 s
+b1 (
+b1 #"
+b11 ~
+b11001 t
+b101 y
+b101 }
+b101 u
+b1 q
+b1 ""
+0R
+1/
+#1050000
+0/
+#1055000
+b10 (
+b10 #"
+1/
+#1060000
+0/
+#1065000
+b11111 r
+b11010 s
+b1 (
+b1 #"
+b1 ~
+b1001110001 t
+b11001 y
+b11001 }
+b1111101 u
+b101 q
+b101 ""
+1/
+#1070000
+0/
+#1075000
+b10 (
+b10 #"
+1/
+#1080000
+0/
+#1085000
+b100 r
+b1110 s
+b1 (
+b1 #"
+b0 ~
+b1111000001 t
+b11111 y
+b11111 }
+b1100100110 u
+b11010 q
+b11010 ""
+1/
+#1090000
+0/
+#1095000
+b0 (
+b0 #"
+1F
+b11010 -
+b11010 7
+b11010 K
+b11010 Y
+b11010 c
+b11010 o
+b11010 !"
+1/
+#1100000
+0/
+#1105000
+0F
+b11 !
+b11 U
+1Q
+1/
+#1110000
+0/
+#1115000
+b10000 [
+b11010 \
+0Q
+b1 +
+b1 k
+b111 h
+b1010100100 ]
+b11010 b
+b11010 g
+b11010 ^
+b1 Z
+b1 j
+1/
+#1120000
+0/
+#1125000
+b10 +
+b10 k
+1/
+#1130000
+0/
+#1135000
+b11001 [
+b10100 \
+b1 +
+b1 k
+b11 h
+b100000000 ]
+b10000 b
+b10000 g
+b110100000 ^
+b11010 Z
+b11010 j
+1/
+#1140000
+0/
+#1145000
+b10 +
+b10 k
+1/
+#1150000
+0/
+#1155000
+b11111 [
+b101 \
+b1 +
+b1 k
+b1 h
+b1001110001 ]
+b11001 b
+b11001 g
+b111110100 ^
+b10100 Z
+b10100 j
+1/
+#1160000
+0/
+#1165000
+b10 +
+b10 k
+1/
+#1170000
+0/
+#1175000
+b100 [
+b10111 \
+b1 +
+b1 k
+b0 h
+b1111000001 ]
+b11111 b
+b11111 g
+b10011011 ^
+b101 Z
+b101 j
+1/
+#1180000
+0/
+#1185000
+b0 +
+b0 k
+1I
+b101 #
+b101 ?
+b101 @
+b101 V
+b101 i
+1/
+#1190000
+0/
+#1195000
+0.
+b100 !
+b100 U
+1*
+1&
+0I
+1/
+#1200000
+0/
+#1205000
+b100 6
+1/
+#1210000
+14
+b11001 0
+b11001 :
+0/
+#1215000
+1.
+b1 !
+b1 U
+1S
+b11001 T
+b11001 l
+b11001 p
+0&
+0*
+1/
+#1220000
+04
+0/
+#1225000
+b11 +"
+b1 "
+b1 5"
+b11 *"
+b1 0"
+b10 2"
+0S
+1/
+#1230000
+0/
+#1235000
+b11 2"
+b0 8"
+b100000 ;"
+b0 :"
+b10 9"
+b10 6"
+1/
+#1240000
+0/
+#1245000
+b10 "
+b10 5"
+b0 8"
+b100000 ;"
+b0 :"
+b1 9"
+b11 6"
+1/
+#1250000
+0/
+#1255000
+b110 +"
+b110 *"
+b10 0"
+1/
+#1260000
+0/
+#1265000
+b1001 +"
+b1001 *"
+b11 0"
+1/
+#1270000
+0/
+#1275000
+b1100 +"
+b1100 *"
+b100 0"
+1/
+#1280000
+0/
+#1285000
+b1111 +"
+b1111 *"
+b101 0"
+1/
+#1290000
+0/
+#1295000
+b10010 +"
+b10010 *"
+b110 0"
+1/
+#1300000
+0/
+#1305000
+b1 +"
+b10101 *"
+b111 0"
+1/
+#1310000
+0/
+#1315000
+b0 "
+b0 5"
+1D
+1/
+#1320000
+0/
+#1325000
+0D
+b10 !
+b10 U
+1R
+1/
+#1330000
+0/
+#1335000
+b11111 r
+b11001 s
+0R
+b1 (
+b1 #"
+b11 ~
+b1001110001 t
+b11001 y
+b11001 }
+b11001 u
+b1 q
+b1 ""
+1/
+#1340000
+0/
+#1345000
+b10 (
+b10 #"
+1/
+#1350000
+0/
+#1355000
+b100 r
+b10000 s
+b1 (
+b1 #"
+b1 ~
+b1111000001 t
+b11111 y
+b11111 }
+b1100000111 u
+b11001 q
+b11001 ""
+1/
+#1360000
+0/
+#1365000
+b10 (
+b10 #"
+1/
+#1370000
+0/
+#1375000
+b10000 r
+b11111 s
+b1 (
+b1 #"
+b0 ~
+b10000 t
+b100 y
+b100 }
+b1000000 u
+b10000 q
+b10000 ""
+1/
+#1380000
+0/
+#1385000
+b0 (
+b0 #"
+1F
+b10000 -
+b10000 7
+b10000 K
+b10000 Y
+b10000 c
+b10000 o
+b10000 !"
+1/
+#1390000
+0/
+#1395000
+b11 !
+b11 U
+1Q
+0F
+1/
+#1400000
+0/
+#1405000
+b11001 [
+b10000 \
+b1 +
+b1 k
+b111 h
+b100000000 ]
+b10000 b
+b10000 g
+b10000 ^
+b1 Z
+b1 j
+0Q
+1/
+#1410000
+0/
+#1415000
+b10 +
+b10 k
+1/
+#1420000
+0/
+#1425000
+b11111 [
+b100 \
+b1 +
+b1 k
+b11 h
+b1001110001 ]
+b11001 b
+b11001 g
+b110010000 ^
+b10000 Z
+b10000 j
+1/
+#1430000
+0/
+#1435000
+b10 +
+b10 k
+1/
+#1440000
+0/
+#1445000
+b100 [
+b11001 \
+b1 +
+b1 k
+b1 h
+b1111000001 ]
+b11111 b
+b11111 g
+b1111100 ^
+b100 Z
+b100 j
+1/
+#1450000
+0/
+#1455000
+b10 +
+b10 k
+1/
+#1460000
+0/
+#1465000
+b10000 [
+b1 \
+b1 +
+b1 k
+b0 h
+b10000 ]
+b100 b
+b100 g
+b1100100 ^
+b11001 Z
+b11001 j
+1/
+#1470000
+0/
+#1475000
+b0 +
+b0 k
+1I
+b11001 #
+b11001 ?
+b11001 @
+b11001 V
+b11001 i
+1/
+#1480000
+0/
+#1485000
+0.
+0I
+b100 !
+b100 U
+1*
+1&
+1/
+#1490000
+0/
+#1495000
+b101 6
+1/
